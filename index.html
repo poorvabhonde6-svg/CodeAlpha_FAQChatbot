@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NeuroNova AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <div class="top">
+        <div class="title">🤖 NeuroNova AI</div>
+
+        <div class="menu">
+            <button onclick="toggleMenu()">⋮</button>
+
+            <div id="menuBox" class="menu">
+                <div onclick="toggleTheme()">🌙 Theme</div>
+                <div onclick="toggleHistory()">📜 History</div>
+                <div onclick="clearChat()">🗑 Clear</div>
+                <div onclick="shareChat()">📤 Share</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUGGESTIONS -->
+    <div class="chips">
+        <span onclick="quick('What is AI')">AI</span>
+        <span onclick="quick('What is Python')">Python</span>
+        <span onclick="quick('Explain ML')">ML</span>
+        <span onclick="quick('What is NLP')">NLP</span>
+    </div>
+
+    <!-- CHAT -->
+    <div id="chat"></div>
+
+    <!-- TYPING -->
+    <div id="typing"></div>
+
+    <!-- INPUT -->
+    <div class="input">
+        <input id="input" placeholder="Ask NeuroNova AI...">
+        <button onclick="send()">Send</button>
+        <button onclick="voice()">🎤</button>
+    </div>
+
+</div>
+
+<!-- HISTORY PANEL -->
+<div id="historyPanel" class="history">
+    <h3>History</h3>
+    <div id="historyList"></div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
